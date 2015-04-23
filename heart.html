@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	div{ width:50px; height:50px; font-size:30px; text-align:center; line-height:50px; position:absolute; left:0; top:0; color:#FFF; background:#F00;}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var i,j;
+		var k = 0;
+		var aDiv = document.getElementsByTagName('div');
+		var oBtn = document.getElementById('list');
+		oBtn.onclick = function(){
+			for( i = 0; i< 5; i++ ){
+				document.body.innerHTML += '<div>' + i + '</div>';	
+			}
+			var flag = true;
+			var wide = 10;
+			var high = 50;
+			function run(p){
+				aDiv[p].style.left = wide + 'px';	
+				aDiv[p].style.top = high + 'px';	
+			};
+			if( k == 0 ){
+				for( i = 0; i< 5; i++ ){
+					if( flag){
+						wide = 10+ i * 50;
+						high = 50+ i * 50;
+						run(i);
+						if( i == 2 )flag = false;
+					}
+					else{
+						wide = 10+ i * 50;
+						high = (5 - i) * 50;
+						run(i);
+					}
+				}
+				k++;
+			}
+			else if( k == 1 ){
+				for( i = 0; i< 5; i++ ){
+					if( flag){
+						wide = 10+ i * 50;
+						high = 50+ i * 50;
+						run(i);
+						if( i == 2 )flag = false;
+					}
+					else{
+						high = 50+ i * 50;
+						wide = (5 - i) * 50;
+						run(i);
+					}
+				}
+				k++;
+			}
+			else if( k == 2 ){
+				for( i = 0; i< 5; i++ ){
+					if( flag){
+						wide = 10+ (2-i) * 50;
+						high = 50+ i * 50;
+						run(i);
+						if( i == 2 )flag = false;
+					}
+					else{
+						high = 50+ i * 50;
+						wide = (i-2) * 50;
+						run(i);
+					}
+				}
+				k++;
+			}
+			else {
+				for( i = 0; i< 5; i++ ){
+					if( flag){
+						wide = 10+ i * 50;
+						high = 50+ (2 - i) * 50;
+						run(i);
+						if( i == 2 )flag = false;
+					}
+					else{
+						high = 50+ i * 50;
+						wide = (i-2) * 50;
+						run(i);
+					}
+				}
+				k = 0;	
+			}
+		};
+	};
+</script>
+</head>
+
+<body>
+<input id="list" type="button" value="自动生成一个V字形" />
+</body>
+</html>

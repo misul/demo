@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>switch...case语句与if...else性能比较</title>		
+		<script type="text/javascript">
+		//声明一点，switch语句只能比较常量，而if语句可以比较复杂的表达式
+		//可以通过几个常用的浏览器测试，会得到不同的结果
+		
+		var count=99999;
+		
+		function nIfElseTest(num)
+		{
+			var dBegin=new Date;
+			//进行
+		
+			var iNum=0;
+			for(var i=0;i<count;i++)
+			{
+				if(num==0)
+				{
+					iNum=0;
+				}
+				else if(num==1)
+				{
+					iNum=0;
+				}
+				else if(num==2)
+				{
+					iNum=0;
+				}
+				else if(num==3)
+				{
+					iNum=0;
+				}
+				else if(num==4)
+				{
+					iNum=0;
+				}
+				else if(num==5)
+				{
+					iNum=0;
+				}
+				else if(num==6)
+				{
+					iNum=0;
+				}
+				else if(num==7)
+				{
+					iNum=0;
+				}
+				else if(num==8)
+				{
+					iNum=0;
+				}
+				else if(num==9)
+				{
+					iNum=0;
+				}
+				else if(num==10)
+				{
+					iNum=0;
+				}
+				else if(num==11)
+				{
+					iNum=0;
+				}
+				else if(num==12)
+				{
+					iNum=0;
+				}
+				else if(num==13)
+				{
+					iNum=0;
+				}
+				else if(num==14)
+				{
+					iNum=0;
+				}
+				else if(num==15)
+				{
+					iNum=0;
+				}
+				else if(num==16)
+				{
+					iNum=0;
+				}
+				else if(num==17)
+				{
+					iNum=0;
+				}
+				else if(num==18)
+				{
+					iNum=0;
+				}
+			}
+			var dEnd=new Date;
+			document.write("if...else耗时"+(dEnd.getTime()-dBegin.getTime())+"毫秒"+",num="+num+"<a href='javascript:history.go(0)'>继续测试</a>");
+		}
+		
+		function nSwitchCaseTest(num)
+		{
+			var dBegin=new Date;
+			//进行
+			for(var i=0;i<count;i++)
+			{
+				switch(num)
+				{
+					case 0: 
+						iNum=0;break;
+					case 1: 
+						iNum=0;break;
+					case 2: 
+						iNum=0;break;
+					case 3: 
+						iNum=0;break;
+					case 4: 
+						iNum=0;break;
+					case 5: 
+						iNum=0;break;
+					case 6: 
+						iNum=0;break;
+					case 7: 
+						iNum=0;break;
+					case 8: 
+						iNum=0;break;
+					case 9: 
+						iNum=0;break;
+					case 10: 
+						iNum=0;break;
+					case 11: 
+						iNum=0;break;
+					case 12: 
+						iNum=0;break;
+					case 13: 
+						iNum=0;break;
+					case 14: 
+						iNum=0;break;
+					case 15: 
+						iNum=0;break;
+					case 16: 
+						iNum=0;break;
+					case 17: 
+						iNum=0;break;
+					case 18: 
+						iNum=0;break;
+					default:
+				}
+			}
+			var dEnd=new Date;
+			document.write("switch_case耗时"+(dEnd.getTime()-dBegin.getTime())+"毫秒"+",num="+num+"<a href='javascript:history.go(0)'>继续测试</a>");
+		}
+		</script>
+	</head>
+	<body>
+		<button onClick="javaScript:nIfElseTest(0)">if0</button> 
+		<button onClick="javaScript:nIfElseTest(2)">if2</button> 
+		<button onClick="javaScript:nIfElseTest(4)">if4</button> 
+		<button onClick="javaScript:nIfElseTest(6)">if6</button> 
+		<button onClick="javaScript:nIfElseTest(8)">if8</button> 
+		<button onClick="javaScript:nIfElseTest(10)">if10</button> 
+		<button onClick="javaScript:nIfElseTest(12)">if12</button> 
+		<button onClick="javaScript:nIfElseTest(14)">if14</button> 
+		<button onClick="javaScript:nIfElseTest(16)">if16</button> 
+		<button onClick="javaScript:nIfElseTest(18)">if18</button>
+		
+		<p><a href="http://www.dreamdu.com/javascript/switch_case/">switch...case</a>测试</p>
+		
+		<button onClick="javaScript:nSwitchCaseTest(0)">switch0</button>
+		<button onClick="javaScript:nSwitchCaseTest(2)">switch2</button>
+		<button onClick="javaScript:nSwitchCaseTest(4)">switch4</button>
+		<button onClick="javaScript:nSwitchCaseTest(6)">switch6</button>
+		<button onClick="javaScript:nSwitchCaseTest(8)">switch8</button>
+		<button onClick="javaScript:nSwitchCaseTest(10)">switch10</button>
+		<button onClick="javaScript:nSwitchCaseTest(12)">switch12</button>
+		<button onClick="javaScript:nSwitchCaseTest(14)">switch14</button>
+		<button onClick="javaScript:nSwitchCaseTest(16)">switch16</button>
+		<button onClick="javaScript:nSwitchCaseTest(18)">switch18</button>
+
+	</body>
+</html>

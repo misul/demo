@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	#div1{width:100px;height:200px;border:1px solid red;display:none;}
+</style>
+</head>
+
+<body>
+	<input type="button" value="按钮" id="btn">
+    <div id="div1"></div>
+    
+    <p>pppppppppppp</p>
+    <p>pppppppppppp</p>
+    <p>pppppppppppp</p>
+    <p>pppppppppppp</p>
+    
+ <script>
+window.onload=function(){
+    	var oBtn=document.getElementById('btn');
+		var oDiv=document.getElementById('div1');
+		
+		oBtn.onclick=function(ev){
+		var onOff=true;
+			var ev=ev||event;
+			ev.cancelBubble=true;
+			if(onOff){
+			oDiv.style.display='block';
+			    onOff=false;
+				}else{
+				oDiv.style.display='none';
+				onOff=true;
+			};
+			
+		};
+		
+		};
+</script>
+</body>
+</html>
