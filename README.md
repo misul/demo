@@ -16,3 +16,6 @@
 | 手机        |   $12   |   12   |
 | 管线        |    $1    |  234  |
 
+-----
+
+![我的头像](https://www.zybuluo.com/static/img/my_head.jpg)
