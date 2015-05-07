@@ -10,15 +10,9 @@
 ####画个流程图
 
 
-st=>start: Start:>https://www.misul.cn
-io=>inputoutput: verification
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-sub=>subroutine: Your Subroutine
-sub2=>subroutine: Your Subroutine
-e=>end
-
-st->io->op->cond
-cond(yes)->sub2->e
-cond(no)->sub->io
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机     | $1600 |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
 
